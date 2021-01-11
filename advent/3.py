@@ -1,4 +1,4 @@
-with open('3-input.txt', 'r') as f:
+with open('3-input.txt') as f:
   lines = [line.rstrip() for line in f]
 
 skip = []
@@ -26,7 +26,7 @@ def do_slope(right, down, input):
   for l in input:
     if l[index] == "#":
       trees += 1
-    index = (index + right) % int(len(l))
+    index = (index + right) % len(l)
   # elif down == 2:
   #   count = 2
   #   index = 0
@@ -39,6 +39,8 @@ def do_slope(right, down, input):
   #     count += 1
   return trees   
 
-total = do_slope(1,1,lines) * do_slope(3,1,lines) * do_slope(5,1,lines) * do_slope(7,1,lines) * do_slope(1,2,skip)
+total = do_slope(3,1,lines) 
+
+#* do_slope(3,1,lines) * do_slope(5,1,lines) * do_slope(7,1,lines) * do_slope(1,2,skip)
 
 print(total)
