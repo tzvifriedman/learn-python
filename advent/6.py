@@ -29,7 +29,6 @@ letter_dict = {}
 #   for (key, value) in letter_dict.items():
 #     if value == "True":
 #       count +=1
-      
 #   print(count)    
 #   total += count
 # print(total)
